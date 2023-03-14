@@ -21,7 +21,9 @@ The people are SICK of our Eclipse overlords. This is a guide to using VSCode fo
   - [Setting up Tests](#setting-up-tests)
   - [Creating Tests](#creating-tests)
   - [Running Tests](#running-tests)
+  - [Documenting Tests](#documenting-tests)
 - [Debugging](#debugging)
+- [JavaFX](#javafx)
 
 ## Required Extensions
 
@@ -142,6 +144,20 @@ There's two ways to do this:
 1. Click the little flask icon on the left side of your screen. From here, we can break down exactly what tests we want to run. We can run all tests, all tests in a file, or a specific test. We can also run tests in debug mode, which is pretty cool. We'll get into that later.
 2. Pop open the command palette and type in "Java Test". Select "Java: Run Tests". This will run all tests in the project.
 
+### Documenting Tests
+
+Here's the deal. VSCode really hates documenting tests. So much so that I don't know how to do it. Here's the workaround:
+
+1. Remove your `/test` folder and all the tests inside of it from your project. Put this on your desktop for the time being.
+2. Generate JavaDocs for your project.
+3. Copy your `/test` folder back into your project.
+
+None of the profs I've consulted with have particularly cared about documenting tests, so I haven't bothered to figure out how to do it. If you do, please let me know.
+
 ## Debugging
 
 Hit `f5`. That's it. Add your breakpoints and you're good to go. You can also debug tests, which is pretty cool. Just click the little flask icon and select "Debug Test". You can also debug a specific test by clicking the little arrow next to the test name.
+
+## JavaFX
+
+JavaFX is the easiest thing to set up in VSCode. When you fire up your command palette and go to create a new Java project, scroll down to the bottom of the build tools and select JavaFX. This will run you through everything you need to get JavaFX up and running. It'll also set up `.fxml` loading for you, which, if you know, you know...
