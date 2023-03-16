@@ -160,4 +160,8 @@ Hit `f5`. That's it. Add your breakpoints and you're good to go. You can also de
 
 ## JavaFX
 
-JavaFX is the easiest thing to set up in VSCode. When you fire up your command palette and go to create a new Java project, scroll down to the bottom of the build tools and select JavaFX. This will run you through everything you need to get JavaFX up and running. It'll also set up `.fxml` loading for you, which, if you know, you know...
+JavaFX is the easiest thing to set up in VSCode. When you fire up your command palette and go to create a new Java project, scroll down to the bottom of the build tools and select JavaFX.
+
+From here, it'll ask you a few questions, like the package name and the location, and finally a project name. From here, it'll ask you a few questions in the terminal, just hit enter for both of them, you don't care. It'll shoot you a little popup that says "JavaFX project created successfully". Click "Open Project" and you're good to go.
+
+From here, you're going to instantly have a warning. Something along the lines of `The type Stage from module javafx.graphics may not be accessible to clients due to missing 'requires transitive'`. Easy to fix. Pop open your `module-info.java` file. You'll see a line that says `requires javafx.graphics;`. Change that to `requires transitive javafx.graphics;`. Boom, warning is gone.
